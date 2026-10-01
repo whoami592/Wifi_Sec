@@ -1,4 +1,4 @@
-# WiFi Guard Sabaz
+# WiFi Sec 
 
 **Coded by Cyber Security Engineer Mr Sabaz Ali Khan**
 
