@@ -10,7 +10,7 @@ Extract the ZIP, open a Linux terminal inside this folder, and run:
 
 ```bash
 bash setup.sh
-bash wifi_guard.sh
+bash wifi_Sec.sh
 ```
 
 If dependencies are missing on Kali/Ubuntu/Debian:
@@ -40,22 +40,22 @@ The setup script only checks dependencies and prints guidance; it does not insta
 ## Commands
 
 ```bash
-bash wifi_guard.sh --demo
-bash wifi_guard.sh scan
-bash wifi_guard.sh --interface wlan0 status
-bash wifi_guard.sh audit
-bash wifi_guard.sh channels
-bash wifi_guard.sh neighbors
-bash wifi_guard.sh diagnose
-bash wifi_guard.sh monitor 12
-bash wifi_guard.sh report
-bash wifi_guard.sh checklist
-bash wifi_guard.sh --help
+bash wifi_Sec.sh --demo
+bash wifi_Sec.sh scan
+bash wifi_Sec.sh --interface wlan0 status
+bash wifi_Sec.sh audit
+bash wifi_Sec.sh channels
+bash wifi_Sec.sh neighbors
+bash wifi_Sec.sh diagnose
+bash wifi_Sec.sh monitor 12
+bash wifi_Sec.sh report
+bash wifi_Sec.sh checklist
+bash wifi_Sec.sh --help
 ```
 
 Options go before the command. Replace `wlan0` with the adapter from `nmcli device status`. If multiple adapters exist, specify one; otherwise the first Wi-Fi adapter is selected. Monitor accepts 1-720 samples; press Ctrl+C to exit the program. Scans use NetworkManager's automatic rescan behavior, so readings can be cached and do not guarantee a fresh scan every five seconds.
 
-Reports are saved in `$XDG_STATE_HOME/wifi-guard-sabaz`, or `~/.local/state/wifi-guard-sabaz` when that variable is unset. The command prints the exact filename. Reports include network identifiers and local IP information, but do not request or export Wi-Fi passwords. Failed report sections are marked INCOMPLETE. Reports do not run gateway pings automatically.
+Reports are saved in `$XDG_STATE_HOME/wifi-Sec-sabaz`, or `~/.local/state/wifi-Sec-sabaz` when that variable is unset. The command prints the exact filename. Reports include network identifiers and local IP information, but do not request or export Wi-Fi passwords. Failed report sections are marked INCOMPLETE. Reports do not run gateway pings automatically.
 
 ## Windows and virtual machines
 
@@ -80,8 +80,8 @@ Advertised encryption is not the same as the cipher actually negotiated. WPA2/WP
 ## Project structure
 
 ```text
-WiFi_Guard_Sabaz/
-  wifi_guard.sh       Entry point and menu
+WiFi_Sec_Sabaz/
+  wifi_Sec.sh       Entry point and menu
   setup.sh            Dependency checker
   lib/core.sh         Discovery, diagnostics, audit and reports
   tests/test.sh       Offline regression checks
